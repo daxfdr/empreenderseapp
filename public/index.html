@@ -1,0 +1,67 @@
+<!DOCTYPE>
+<html ng-app>
+<head>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+
+      <title>EMpREenDEr$e App</title>
+</head>
+<body>
+	<div class="container" ng-controller="AppCtrl">
+		<h1>EMpREenDEr$e App</h1>
+
+		<table class="table">
+			<tr>
+				<td>Nome</td><td><input class="form-control" ng-model="node.nome"></td>
+			</tr>
+			<tr>
+				<td>Endereço *</td><td><input class="form-control" ng-model="node.end"></td>
+			</tr>
+			<tr>
+				<td>Telefone *</td><td><input class="form-control" ng-model="node.tel"></td>
+			</tr>
+			<tr>
+				<td>Perfil no Facebook *</td><td><input class="form-control" ng-model="node.facebook"></td>
+			</tr>
+			<tr>
+				<td>Email *</td><td><input class="form-control" ng-model="node.email"></td>
+			</tr>
+			<tr>
+				<td>Já sabe sua intenção de vida? *</td><td><input class="form-control" ng-model="node.intencaodevida"></td>
+			</tr>
+			<tr>
+				<td colspan=2 align="right"><button class="btn btn-primary" ng-click="addNode()">Registrar</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="update()">Salvar</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">Limpar</button></td>
+			</tr>
+		</table>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th width="30%">Nome</th>
+					<th width="30%">Telefone</th>
+					<th width="30%">Email</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="node in nodelist">
+					<td>{{node.nome}}</td>
+					<td>{{node.tel}}</td>
+					<td>{{node.email}}</td>
+					<td><button class="btn btn-danger" ng-click="remove(node._id)">Remove</button></td>
+					<td><button class="btn btn-warning" ng-click="edit(node._id)">Edit</button></td>
+				</tr>
+			</tbody>
+		</table>
+    </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+
+<script src="controllers/controller.js"></script>
+
+</body>
+</html>
