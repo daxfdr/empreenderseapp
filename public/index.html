@@ -37,8 +37,7 @@
 			<tr>
 				<td colspan=2 align="right">
 					<button class="btn btn-primary" ng-click="addNode()">Registrar</button>&nbsp;&nbsp;
-					<button class="btn btn-info" ng-click="update()">Salvar</button>&nbsp;&nbsp;
-					<button class="btn btn-info" ng-click="deselect()">Limpar</button>
+
 				</td>
 			</tr>
 		</table>
@@ -56,8 +55,8 @@
 					<td>{{node.nome}}</td>
 					<td>{{node.tel}}</td>
 					<td>{{node.email}}</td>
-					<td><button class="btn btn-danger" ng-click="remove(node._id)">Remove</button></td>
-					<td><button class="btn btn-warning" ng-click="edit(node._id)">Edit</button></td>
+					<td><button class="btn btn-danger" ng-click="remove(node._id)">Remover</button></td>
+					
 				</tr>
 			</tbody>
 		</table>
