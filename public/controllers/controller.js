@@ -32,7 +32,6 @@ $scope.edit = function(id) {
 	console.log(id);
 	$http.get('/nodelist/' + id).success(function (response){
 		$scope.node = response;
-
 	});
 
 };
@@ -48,7 +47,7 @@ $scope.update = function() {
 
 $scope.deselect = function() {
 	$scope.node = "";
-
+	refresh()
 };
 
 

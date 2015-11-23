@@ -12,6 +12,7 @@
 </head>
 <body>
 	<div class="container" ng-controller="AppCtrl">
+
 		<h1>EMpREenDEr$e App</h1>
 
 		<table class="table">
@@ -34,7 +35,11 @@
 				<td>Já sabe sua intenção de vida? *</td><td><input class="form-control" ng-model="node.intencaodevida"></td>
 			</tr>
 			<tr>
-				<td colspan=2 align="right"><button class="btn btn-primary" ng-click="addNode()">Registrar</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="update()">Salvar</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">Limpar</button></td>
+				<td colspan=2 align="right">
+					<button class="btn btn-primary" ng-click="addNode()">Registrar</button>&nbsp;&nbsp;
+					<button class="btn btn-info" ng-click="update()">Salvar</button>&nbsp;&nbsp;
+					<button class="btn btn-info" ng-click="deselect()">Limpar</button>
+				</td>
 			</tr>
 		</table>
 
