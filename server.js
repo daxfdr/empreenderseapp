@@ -18,6 +18,7 @@ app.get('/nodelist', function (req, res){
 
 app.post('/nodelist', function (req, res){
 	console.log(req.body);
+	
 	db.nodelist.insert(req.body, function (err, doc) {
 		res.json(doc);
 	});
@@ -49,9 +50,6 @@ app.put('/nodelist/:id', function (req, res) {
 		update: {$set: {nome: req.body.nome, end: req.body.end, tel: req.body.tel, facebook: req.body.facebook, email: req.body.email, intencaodevida: req.body.intencaodevida}},
 		new: true}, function (err, doc) {
 			res.json(doc);
-
-
-
 	});
 
 });
